@@ -13,11 +13,9 @@ menu = [
 
 def index(request):
     posts = Women.objects.all()
-    cats = Category.objects.all()
 
     send_parameters = {
         'posts': posts,
-        'cats': cats,
         'menu': menu,
         'title': 'Main page',
         'cat_selected': 0
@@ -51,14 +49,12 @@ def show_post(request, post_id):
 
 def show_category(request, cat_id):
     posts = Women.objects.filter(cat_id=cat_id)
-    cats = Category.objects.all()
 
     if len(posts) == 0:
         raise Http404
 
     send_parameters = {
         'posts': posts,
-        'cats': cats,
         'menu': menu,
         'title': 'Display by category',
         'cat_selected': cat_id
