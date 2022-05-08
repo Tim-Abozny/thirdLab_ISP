@@ -10,7 +10,7 @@ class Women(models.Model):
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True)
-    cat = models.ForeignKey('Category', on_delete=models.PROTECT)
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT, verbose_name="Category")
 
     def __str__(self):
         return self.title   # write this magic method to print titles after SQL query
