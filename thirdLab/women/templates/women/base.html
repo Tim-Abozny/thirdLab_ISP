@@ -22,7 +22,7 @@
 				{% if request.user.is_authenticated %}
 				<li class="last">{{ user.username }} | <a href="{% url 'logout' %}">Log Out</a></li>
 				{% else %}
-				<li class="last"><a href="{% url 'register' %}">Sign Up</a> | <a href="{% url 'login' %}">Log In</a></li>>
+				<li class="last"><a href="{% url 'register' %}">Sign Up</a> | <a href="{% url 'login' %}">Log In</a></li>
 				{% endif %}
 			</ul>
 			<div class="clear"></div>
