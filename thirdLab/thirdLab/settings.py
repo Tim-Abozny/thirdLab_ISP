@@ -82,9 +82,10 @@ WSGI_APPLICATION = 'thirdLab.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lab34db',
-        'USER': 'lab34',
+        'NAME': 'db_django',
+        'USER': 'root',
         'PASSWORD': 'password',
+        'HOST': 'db',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
