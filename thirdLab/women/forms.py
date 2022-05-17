@@ -24,7 +24,7 @@ class AddPostForm(forms.ModelForm):
         title = self.cleaned_data['title']
         if len(title) > 200:
             raise ValidationError('Length more then 200 symbols')
-        if len(title) < 20:
+        if len(title) < 5:
             raise ValidationError('Length less then 20 symbols')
 
         return title
