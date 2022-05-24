@@ -22,4 +22,4 @@ services:
       - "5432:5432"
     restart: always
     volumes:
-      - ./db_django:/var/lib/postgresql
+      - ./postgres-data:/var/lib/postgresql/data
